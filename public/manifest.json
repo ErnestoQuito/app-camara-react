@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Camara App",
+  "name": "Frontend para visualizar la camara web",
   "icons": [
     {
       "src": "favicon.ico",
