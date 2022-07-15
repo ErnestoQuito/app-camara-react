@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app-camara {
+  min-height: 500px;
+  display: flex;
+}
+#contenedor-camara {
+  border: 1px solid red;
+  flex-grow: 3;
+  /* min-width: 50%; */
+}
+#contenedor-ajustes {
+  border: 1px solid red;
+  flex-grow: 1;
+  /* min-width: 50%; */
+  padding: 25px;
+  /* margin-bottom: 10px; */
+  display: flex;
+  flex-direction: column;
+}
+#notificaciones {
+  margin-top: 50px;
+}
+.titulo {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+.checkbox {
+  font-family: 'Poppins', sans-serif;
+  width: 50px;
+  text-align: right;
+}
+label {
+  font-family: 'Poppins', sans-serif;
+}
+select {
+  font-family: 'Poppins', sans-serif;
+  height: 25px;
+  width: 100px;
+}
