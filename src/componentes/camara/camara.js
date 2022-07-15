@@ -15,7 +15,11 @@ export default function Camara() {
     <div id='app-camara'>
       <div id='contenedor-camara'>
         <div id='visualizacion'></div>
-        <div id='acciones'></div>
+        <div id='acciones'>
+          <button id='accion'>INICIAR</button>
+          <button id='accion'>DETENER</button>
+          <button className='nodetectado'>DETECTADO</button>
+        </div>
       </div>
       <div id='contenedor-ajustes'>
         <div id='temporizador'>

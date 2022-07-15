@@ -8,14 +8,70 @@
   display: flex;
 }
 #contenedor-camara {
-  border: 1px solid red;
-  flex-grow: 3;
-  /* min-width: 50%; */
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 10px 0 0 10px;
+  /* flex-grow: 3; */
+  width: 65%;
 }
+
+#visualizacion {
+  height: 85%;
+  background-color: black;
+  border-radius: 10px 0 0 0;
+}
+
+#acciones {
+  border-top: 1px solid black;
+  height: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#accion {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  margin: 0 5px 0 5px;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+}
+
+#accion:hover {
+  background-color: silver;
+  border: 2px solid black;
+}
+
+.detectado {
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  margin: 0 5px 0 5px;
+  height: 40px;
+  width: 100px;
+}
+
+.nodetectado {
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  margin: 0 5px 0 5px;
+  height: 40px;
+  width: 100px;
+}
+/*  */
 #contenedor-ajustes {
-  border: 1px solid red;
-  flex-grow: 1;
-  /* min-width: 50%; */
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 0 10px 10px 0;
+  /* flex-grow: 1; */
+  width: 35%;
   padding: 25px;
   /* margin-bottom: 10px; */
   display: flex;
