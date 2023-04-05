@@ -1,12 +1,17 @@
-import './estilos/App.css';
+import { Routes, Route } from 'react-router-dom';
+import './estilos/Cabecera.css';
 import Menu from './componentes/cabecera/menu';
 import Camara from './componentes/camara/camara';
+import { ListCorreo } from './componentes/servidor_correo/list_correo';
 
 function App() {
   return (
     <div className="contenedor-app">
       <Menu/>
-      <Camara/>
+      <Routes>
+        <Route path='/' element={ <Camara/> }></Route>
+        <Route path='/configuracion/listar' element={ <ListCorreo/> }></Route>
+      </Routes>
     </div>
   );
 }
