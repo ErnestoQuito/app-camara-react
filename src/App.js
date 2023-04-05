@@ -10,7 +10,7 @@ function App() {
       <Menu/>
       <Routes>
         <Route path='/' element={ <Camara/> }></Route>
-        <Route path='/configuracion/listar' element={ <ListCorreo/> }></Route>
+        <Route path='/configuracion' element={ <ListCorreo/> }></Route>
       </Routes>
     </div>
   );

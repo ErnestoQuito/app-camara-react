@@ -19,7 +19,9 @@
 
 .elemento-menu {
   list-style-type: none;
-  margin: 5px
+  margin: 5px;
+  padding-right: 6px;
+  border-right: 2px solid white;
 }
 
 .elemento-menu a {

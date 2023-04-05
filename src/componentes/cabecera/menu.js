@@ -8,7 +8,7 @@ export default function Menu() {
             <Link to='/'>INICIO</Link>
           </li>
           <li className='elemento-menu'>
-            <Link to='/configuracion/listar'>CONFIGURACION SERVIDOR DE CORREO</Link>
+            <Link to='/configuracion'>CONFIGURACION</Link>
           </li>
         </ul>
       </nav>
