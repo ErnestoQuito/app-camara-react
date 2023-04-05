@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+}
+
+.contenedor-menu {
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
+  background-color: #003300;
+  height: 60px;
+}
+
+.contenedor-elementos {
+  height: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.elemento-menu {
+  list-style-type: none;
+  margin: 5px
+}
+
+.elemento-menu a {
+  color: white;
+  text-decoration: none;
+}
