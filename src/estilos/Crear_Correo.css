@@ -1,0 +1,73 @@
+.contenedor-formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario {
+  margin: 10px;
+}
+
+#titulo-formulario {
+  padding: 10px;
+  background-color: silver;
+}
+
+.contenedor-items {
+  margin: 10px;
+  padding-bottom: 10px;
+}
+
+.contenedor-servidor {
+  padding: 2px;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+}
+
+.servidor {
+  display: flex;
+  flex-direction: column;
+}
+
+.credenciales {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+/*
+#imap, #usuario, #pass, #puerto {
+  width: 50%;
+}
+*/
+#nombres, #apellidos, #telefono,
+#de, #para, #cc, #bcc, #asunto {
+  width: 75%;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.acciones-formulario {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+#guardar, #salir {
+  width: 100px;
+  height: 30px;
+}
+
+Link {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}

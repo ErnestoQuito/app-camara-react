@@ -1,0 +1,33 @@
+.button-crear {
+  display: flex;
+  width: 100px;
+  height: 35px;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: silver;
+}
+
+.button-crear:hover {
+  background-color: rgb(203, 200, 200);
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.contenedor-titulo {
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.contenedor-acciones {
+  padding-left: 2%;
+  padding-right: 2%;
+}
