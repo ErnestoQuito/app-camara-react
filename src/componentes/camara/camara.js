@@ -2,6 +2,8 @@ import '../../estilos/Camara.css';
 import { useState } from 'react';
 
 export default function Camara() {
+  const [estaDetectado, setEstaDetectado] = useState(false);
+  const [msgDetectado, setMsgDetectado] = useState('SIN ALERTA');
   const [autoapagadoActivo, setAutoapagadoActivo] = useState(true);
   const [porCorreoActivo, setPorCorreoActivo] = useState(true);
   const establecerAutoapagado = () => {
@@ -10,12 +12,22 @@ export default function Camara() {
   const establecerPorCorreo = () => {
     setPorCorreoActivo(!porCorreoActivo);
   };
+  const establecerEstaDetectado = () => { 
+    setEstaDetectado(!estaDetectado);
+    setMsgDetectado(estaDetectado ? 'SIN ALERTA' : 'CON ALERTA');
+  }
 
   return (
     <div id='app-camara'>
       <div id='contenedor-camara'>
         <div id='visualizacion'></div>
-        <div id='acciones'></div>
+        <div id='acciones'>
+          <button id='iniciar'>INICIAR</button>
+          <button id='detener'>DETENER</button>
+          <button id='mute'>Silenciar</button>
+          <button id='esta_detectado' className={estaDetectado ? 'detectado' : 'no-detectado'}>{msgDetectado}</button>
+          <button id='iniciar' onClick={establecerEstaDetectado}>Test Activar Manual</button>
+        </div>
       </div>
       <div id='contenedor-ajustes'>
         <div id='temporizador'>
@@ -45,7 +57,7 @@ export default function Camara() {
           <div><input type='checkbox'/><label> Alerta emergente (popup)</label></div>
           </div>
         </div>
-        <div>Guía camara web: <a href='https://www.digitalocean.com/community/tutorials/front-and-rear-camera-access-with-javascripts-getusermedia-es' target='_blank' rel='noreferrer'>acceder a las cámaras</a></div>
+        {/* <div>Guía camara web: <a href='https://www.digitalocean.com/community/tutorials/front-and-rear-camera-access-with-javascripts-getusermedia-es' target='_blank' rel='noreferrer'>acceder a las cámaras</a></div> */}
       </div>
     </div>
   );
