@@ -1,11 +1,26 @@
-import '../../estilos/Camara.css';
 import { useState } from 'react';
+import '../../estilos/Camara.css';
+
+function SonidoVideo() {
+  const [activarSonido, setActivarSonido] = useState(true);
+
+  const establecerSonido = () => {
+    setActivarSonido(!activarSonido);
+    console.log(`establecerSonido ${activarSonido}`);
+  };
+  if (activarSonido) {
+    return <button onClick={establecerSonido} id='con-sonido'></button>
+  };
+
+  return <button onClick={establecerSonido} id='sin-sonido'></button>;
+}
 
 export default function Camara() {
   const [estaDetectado, setEstaDetectado] = useState(false);
   const [msgDetectado, setMsgDetectado] = useState('SIN ALERTA');
   const [autoapagadoActivo, setAutoapagadoActivo] = useState(true);
   const [porCorreoActivo, setPorCorreoActivo] = useState(true);
+
   const establecerAutoapagado = () => {
     setAutoapagadoActivo(!autoapagadoActivo);
   };
@@ -15,7 +30,7 @@ export default function Camara() {
   const establecerEstaDetectado = () => { 
     setEstaDetectado(!estaDetectado);
     setMsgDetectado(estaDetectado ? 'SIN ALERTA' : 'CON ALERTA');
-  }
+  };
 
   return (
     <div id='app-camara'>
@@ -24,8 +39,12 @@ export default function Camara() {
         <div id='acciones'>
           <button id='iniciar'>INICIAR</button>
           <button id='detener'>DETENER</button>
-          <button id='mute'>Silenciar</button>
-          <button id='esta_detectado' className={estaDetectado ? 'detectado' : 'no-detectado'}>{msgDetectado}</button>
+          <SonidoVideo />
+          <button
+            id='esta_detectado'
+            className={estaDetectado ? 'detectado' : 'no-detectado'}
+          >{msgDetectado}
+          </button>
           <button id='iniciar' onClick={establecerEstaDetectado}>Test Activar Manual</button>
         </div>
       </div>

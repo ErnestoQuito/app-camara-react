@@ -6,21 +6,30 @@
 #app-camara {
   min-height: 500px;
   display: flex;
+  flex-wrap: wrap;
 }
 #contenedor-camara {
+  display: flex;
+  flex-direction: column;
   border: 1px solid red;
   flex-grow: 3;
-  /* min-width: 50%; */
 }
+
+#visualizacion {
+  color: white;
+  border: 1px solid black;
+  background-color: black;
+  min-height: 450px;
+}
+
 #contenedor-ajustes {
-  border: 1px solid red;
+  border: 1px solid blue;
   flex-grow: 1;
-  /* min-width: 50%; */
   padding: 25px;
-  /* margin-bottom: 10px; */
   display: flex;
   flex-direction: column;
 }
+
 #notificaciones {
   margin-top: 50px;
 }
@@ -49,11 +58,30 @@ select {
   flex-wrap: wrap;
 }
 
-#iniciar, #detener, #mute,
+#iniciar, #detener,
 #esta_detectado {
   width: 150px;
   height: 40px;
   font-weight: bold;
+  margin: 2px;
+}
+
+#con-sonido {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-image: url(../assets/volume.png);
+  background-size: contain;
+  margin: 2px;
+}
+
+#sin-sonido {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-image: url(../assets/mute.png);
+  background-size: contain;
+  margin: 2px;
 }
 
 .detectado {
